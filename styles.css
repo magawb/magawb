@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  padding: 40px 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo span { color: #22d3ee; }
+
+.hero-content {
+  max-width: 650px;
+  margin: 120px auto;
+  text-align: center;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.dark {
+  background: #020617;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 30px;
+  border-radius: 16px;
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.primary {
+  background: #22d3ee;
+  color: #020617;
+}
+
+.ghost {
+  border: 1px solid #22d3ee;
+  color: #22d3ee;
+  background: transparent;
+}
+
+/* ANIMACIONES */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CAROUSEL */
+.carousel {
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  animation: scroll 20s linear infinite;
+}
+
+.client {
+  min-width: 160px;
+  text-align: center;
+}
+
+.client img {
+  width: 120px;
+  border-radius: 12px;
+  background: white;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* FORM */
+.form {
+  max-width: 420px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input, textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+}
+
+.footer {
+  padding: 30px;
+  text-align: center;
+  color: #94a3b8;
+}
