@@ -13,8 +13,7 @@ animated.forEach(el => observer.observe(el));
 
 document.addEventListener("DOMContentLoaded", () => {
   const elements = [
-    { id: "title", speed: 60 },
-    { id: "subtitle", speed: 40 }
+    { id: "title", speed: 60 }
   ];
 
   function typeElement(el, speed, callback) {
